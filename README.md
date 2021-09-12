@@ -1,3 +1,7 @@
+loader-builder-target
+==============
+基于loader-builder，增加targetDir属性
+
 loader-builder
 ==============
 [![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)](https://david-dm.org/JacksonTian/loader-builder) [![Build Status](https://travis-ci.org/JacksonTian/loader-builder.svg?branch=master)](https://travis-ci.org/JacksonTian/loader-builder) [![Coveralls github](https://img.shields.io/coveralls/github/JacksonTian/loader-builder.svg)](https://coveralls.io/r/JacksonTian/loader-builder)
