@@ -19,10 +19,12 @@ if (argv.length < 4) {
   process.exit(1);
 }
 
+// app
+var appDir = path.join(process.cwd());
 // app/views
 var viewsDir = path.join(process.cwd(), argv[2]);
 // app/
-var baseDir = path.join(process.cwd(), argv[3]);
+var destDir = path.join(process.cwd(), argv[3]);
 // no debug
 var noDebug = argv[4] === '--no-debug';
 
@@ -36,14 +38,14 @@ console.log(colors.magenta('Scaned.'), colors.cyan(scaned.length),
   colors.magenta('asset(s) will be build.'));
 
 // combo？md5 hash
-var minified = builder.minify(baseDir, scaned, noDebug);
+var minified = builder.minify(appDir, destDir, scaned, noDebug);
 // console.log(minified);
 console.log(colors.magenta(' 🏁  Compile static assets done.'),
   colors.gray('Build time'), colors.cyan(new Date() - start),
   colors.gray('ms.'));
 
 // write the assets mapping into assets.json
-var assets = path.join(baseDir, 'assets.json');
+var assets = path.join(destDir, 'assets.json');
 console.log(colors.magenta('assets.json is here: '), colors.cyan(assets));
 var map = builder.map(minified);
 fs.writeFileSync(assets, JSON.stringify(map));

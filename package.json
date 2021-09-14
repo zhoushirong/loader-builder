@@ -1,6 +1,6 @@
 {
   "name": "loader-builder-target",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Builder of Loader",
   "main": "lib/builder.js",
   "scripts": {
@@ -35,9 +35,9 @@
     "coveralls": "*",
     "eslint": "^6.2.2",
     "expect.js": "^0.3.1",
-    "nyc": "^14.1.1",
     "mocha": "^3.4.2",
     "mocha-lcov-reporter": "*",
+    "nyc": "^14.1.1",
     "should": "3.0.x",
     "travis-cov": "*"
   },
